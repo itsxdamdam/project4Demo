@@ -101,9 +101,8 @@ Delete Cluster
 If you want to delete the kubernetes cluster just run this command minikube delete. You can also stop the kubernetes cluster with this command minikube stop 8. CircleCI Integration
 
 Create a CircleCI Account (use your Github account for a better integration)
-Create a config using this template
+Attach circleci status badge as seen at the top of the readme file
 
-Add a status badge using this template: [![<github_username>](https://circleci.com/gh/<github_username>/<repository>.svg?style=svg)](https://circleci.com/gh/<github_username>/<repository>) replace <github_username> and <repository> with your data as seen at the top of readme file.
 
 Workarounds Minikube
 
@@ -111,8 +110,3 @@ Minikube common issues: Out of memory or No space left on the device. Change the
 
 Sometimes you can't run a bash script using this format ./run_docker.sh but you have some alternative like bash run_docker.sh or . ./run_docker.sh
 
-Add pytest to the requirements.txt file and update the Makefile to add this command python3 -m pytest -vv test_app.py which is the file that contains the tests for home and predict endpoints. Linting warnings
-
-The warning for logging format interpolation appears when we want to use f-strings but we can disable using W1202. So we need change this command pylint --disable=R,C,W1203 to pylint --disable=R,C,W1202 Tests on Circle CI
-
-For pytest: https://circleci.com/docs/2.0/collect-test-data/#pytest Kubernetes running docker image
